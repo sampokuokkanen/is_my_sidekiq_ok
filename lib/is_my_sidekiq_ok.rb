@@ -4,6 +4,8 @@ require 'is_my_sidekiq_ok/version'
 require 'is_my_sidekiq_ok/engine'
 require 'dry-configurable'
 
+# IsMySidekiqOk checks whether Sidekiq is running and is working
+# within the parameters specified in the initializer.
 module IsMySidekiqOk
   extend Dry::Configurable
   extend self
