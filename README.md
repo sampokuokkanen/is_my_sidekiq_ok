@@ -1,5 +1,8 @@
 # IsMySidekiqOk
 
+[![Gem Version](http://img.shields.io/gem/v/is_my_sidekiq_ok.svg)](https://rubygems.org/gems/is_my_sidekiq_ok)
+[![Gem Downloads](https://img.shields.io/gem/dt/is_my_sidekiq_ok.svg)](https://rubygems.org/gems/is_my_sidekiq_ok)
+
 IsMySidekiqOk answers the question: is your Sidekiq ok? 
 Define limits, and then if Sidekiq is running within those limits, you get a :success 200 response, otherwise you get a 500 error response.
 Can be used with Rails > 5.2. 
