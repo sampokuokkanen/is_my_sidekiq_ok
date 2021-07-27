@@ -18,6 +18,8 @@ jobs:
     steps:
       # https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v2
+      - name: Start Redis
+        uses: supercharge/redis-github-action@1.2.0
       # https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
