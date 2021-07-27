@@ -2,6 +2,7 @@
 
 IsMySidekiqOk answers the question: is your Sidekiq ok? 
 Define limits, and then if Sidekiq is running within those limits, you get a :success 200 response, otherwise you get a 500 error response.
+Can be used with Rails > 5.2. 
 *You can customize the response code. 
 ## Usage
 How to use my plugin.
