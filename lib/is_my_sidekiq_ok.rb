@@ -22,6 +22,7 @@ module IsMySidekiqOk
 
   SETTINGS = %i[processes_size].freeze
 
+  # TODO refactor this
   def ok?(stats)
     return false if SETTINGS.any? { |setting| stats[setting] <= IsMySidekiqOk.config.send(setting) }
 

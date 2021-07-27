@@ -3,7 +3,7 @@ PATH
   specs:
     is_my_sidekiq_ok (0.1.0)
       dry-configurable
-      rails (~> 6.1.4)
+      rails (>= 5.2)
 
 GEM
   remote: https://rubygems.org/

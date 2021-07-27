@@ -19,6 +19,6 @@ Gem::Specification.new do |spec|
   spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   spec.add_dependency 'dry-configurable'
-  spec.add_dependency 'rails', '~> 6.1.4'
+  spec.add_dependency 'rails', '>= 5.2'
   spec.add_development_dependency 'byebug'
 end
