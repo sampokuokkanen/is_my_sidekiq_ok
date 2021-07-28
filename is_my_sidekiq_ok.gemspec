@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata['changelog_uri'] = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
   spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  spec.required_ruby_version = '>= 2.5.0'
 
   spec.add_dependency 'dry-configurable'
   spec.add_dependency 'rails', '>= 5.2'

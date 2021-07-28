@@ -8,7 +8,8 @@ require 'dry-configurable'
 # within the parameters specified in the initializer.
 module IsMySidekiqOk
   extend Dry::Configurable
-  extend self
+
+  module_function
 
   setting :status_symbol, :ok
   setting :error_symbol, :internal_server_error
@@ -22,7 +23,7 @@ module IsMySidekiqOk
 
   SETTINGS = %i[processes_size].freeze
 
-  # TODO refactor this
+  # TODO: refactor this
   def ok?(stats)
     return false if SETTINGS.any? { |setting| stats[setting] <= IsMySidekiqOk.config.send(setting) }
 

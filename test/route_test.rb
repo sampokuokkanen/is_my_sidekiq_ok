@@ -34,4 +34,17 @@ class SidekiqOkTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test 'if Sidekiq is not ok, we get 500 status code' do
+    sidekiq_mock = MiniTest::Mock.new
+    sidekiq_mock.expect :fetch_stats!, GOOD_STATS.merge({ processes_size: 0 })
+    ::Sidekiq::Stats.stub :new, sidekiq_mock do
+      get '/is_my_sidekiq_ok', headers: { 'HTTP_AUTHORIZATION' => @authorization }
+      assert_response :internal_server_error
+    end
+  end
+
+  test 'you can get stats as json' do
+    get '/is_my_sidekiq_ok/stats', headers: { 'HTTP_AUTHORIZATION' => @authorization }
+    assert @response.body.include?('"processed":0')
+  end
 end
