@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    is_my_sidekiq_ok (0.1.0)
+    is_my_sidekiq_ok (0.2.0)
       dry-configurable
       rails (>= 5.2)
 
