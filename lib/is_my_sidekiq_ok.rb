@@ -11,12 +11,12 @@ module IsMySidekiqOk
 
   module_function
 
-  setting :status_symbol, :ok
-  setting :error_symbol, :internal_server_error
-  setting :processes_size, 4
-  setting :default_queue_latency, 30
-  setting :workers_size, 0
-  setting :enqueued, 50
+  setting :status_symbol, default: :ok
+  setting :error_symbol, default: :internal_server_error
+  setting :processes_size, default: 4
+  setting :default_queue_latency, default: 30
+  setting :workers_size, default: 0
+  setting :enqueued, default: 50
 
   setting :name
   setting :password

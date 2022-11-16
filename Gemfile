@@ -10,6 +10,8 @@ group :development do
   gem 'sidekiq'
   gem 'sqlite3'
 end
-
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 # To use a debugger
 # gem 'byebug', group: [:development, :test]

@@ -45,6 +45,6 @@ class SidekiqOkTest < ActionDispatch::IntegrationTest
 
   test 'you can get stats as json' do
     get '/is_my_sidekiq_ok/stats', headers: { 'HTTP_AUTHORIZATION' => @authorization }
-    assert @response.body.include?('"processed":0')
+    assert @response.body.include?('"failed":0')
   end
 end
